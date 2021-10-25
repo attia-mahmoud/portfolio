@@ -25,9 +25,9 @@ const ContactForm = () => {
             <Controller
                 name="user_name"
                 id="firstName"
+                aria-label="first name"
                 control={control}
                 rules={{ required: true }}
-                
                 defaultValue="John"
                 render={({ field }) => (
                     <>
@@ -40,6 +40,7 @@ const ContactForm = () => {
             <Controller
                 name="user_email"
                 id="email"
+                aria-label="email"
                 rules={{ required: true, pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ }}
                 control={control}
                 defaultValue="John@example.com"
@@ -55,12 +56,13 @@ const ContactForm = () => {
             <Controller
                 name="message"
                 id="message"
+                aria-label="message"
                 rules={{ required: true }}
                 control={control}
                 defaultValue=""
                 render={({ field }) => (
                     <>
-                    <Label htmlFor="email">Message: </Label>
+                    <Label htmlFor="message">Message: </Label>
                     <Textarea {...field} rows={6} mb={3} />
                     {errors.message?.type === 'required' && "A message is required"}
                     </>

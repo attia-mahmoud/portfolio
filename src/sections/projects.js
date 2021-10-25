@@ -15,7 +15,7 @@ const data = [
     description:  
       'A platform, mainly targeted towards college and university level students, where users can gain help and knowledge as well as provide other students with the same through asking questions, sharing content, or simply expressing their opinions',
     image: Project1,
-    url: '',
+    url: '#',
     video: 'https://www.youtube.com/watch?v=_V2gIL7cn20',
     code: 'https://github.com/attimoovy/edushare',
   },
@@ -25,7 +25,7 @@ const data = [
     description:  
     'An informative site tailored to providing complete information about COVID. Utilizes a JSON API to fetch global data about the pandemic in real-time. Designed the frontend and enhanced its user experience with JavaScript and Bootstrap.',
     image: Project2,
-    url: '',
+    url: '#',
     video: 'https://www.youtube.com/watch?v=D6Azj88995s',
     code: 'https://github.com/attimoovy/covid',
   },
@@ -35,7 +35,7 @@ const data = [
     description:  
       'An web application that can easily help you track all your workouts in an organized manner, and stores it by date and even workout type for future reference, all while being presented with a user friendly interface and a dynamic homepage.',
     image: Project3,
-    url: '',
+    url: '#',
     video: 'https://www.youtube.com/watch?v=pv5st7R_jBk',
     code: '#',
   },
