@@ -7,6 +7,7 @@ import Carousel from 'react-multi-carousel';
 import Project1 from '../assets/projects/bannerImg.png';
 import Project2 from '../assets/projects/covidImg.png';
 import Project3 from '../assets/projects/workoutImg.png';
+import Project4 from '../assets/projects/paletteImg.png';
 
 const data = [
   {
@@ -33,11 +34,21 @@ const data = [
     id: 3,
     title: 'Workout Tracker',
     description:  
-      'An web application that can easily help you track all your workouts in an organized manner, and stores it by date and even workout type for future reference, all while being presented with a user friendly interface and a dynamic homepage.',
+      'A web application that can easily help you track all your workouts in an organized manner, and stores it by date and even workout type for future reference, all while being presented with a user friendly interface and a dynamic homepage.',
     image: Project3,
     url: '#',
     video: 'https://www.youtube.com/watch?v=pv5st7R_jBk',
-    code: '#',
+    code: 'https://github.com/attimoovy/workout_tracker',
+  },
+  {
+    id: 4,
+    title: 'Color Palette Generator',
+    description:  
+      'A randomized color-palette generator, built with React and Chakra UI, that allows you to customize your very own color schemes.',
+    image: Project4,
+    url: 'https://palettegen.netlify.app/',
+    video: '#',
+    code: 'https://github.com/attimoovy/palette_generator',
   },
   
 ];
