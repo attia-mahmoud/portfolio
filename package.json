@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "export": "next export"
   },
   "dependencies": {
     "animate.css": "^4.1.1",

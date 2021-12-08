@@ -7,7 +7,7 @@ import Carousel from 'react-multi-carousel';
 import Project1 from '../assets/projects/bannerImg.png';
 import Project2 from '../assets/projects/covidImg.png';
 import Project3 from '../assets/projects/workoutImg.png';
-import Project4 from '../assets/projects/paletteImg.png';
+import Project4 from '../assets/projects/tripImg.png';
 
 const data = [
   {
@@ -24,7 +24,7 @@ const data = [
     id: 2,
     title: 'Covid-19 Awareness Site',
     description:  
-    'An informative site tailored to providing complete information about COVID. Utilizes a JSON API to fetch global data about the pandemic in real-time. Designed the frontend and enhanced its user experience with JavaScript and Bootstrap.',
+    'An informative site tailored to providing complete information about COVID-19. Utilizes a JSON API to fetch global data about the pandemic in real-time. Designed the frontend and enhanced its user experience with JavaScript and Bootstrap.',
     image: Project2,
     url: '#',
     video: 'https://www.youtube.com/watch?v=D6Azj88995s',
@@ -34,7 +34,7 @@ const data = [
     id: 3,
     title: 'Workout Tracker',
     description:  
-      'A web application that can easily help you track all your workouts in an organized manner, and stores it by date and even workout type for future reference, all while being presented with a user friendly interface and a dynamic homepage.',
+      'A web application that can easily help you track all your workouts in an organized manner, and stores it by date and workout type for future reference, all while being presented with a user friendly interface and a dynamic homepage.',
     image: Project3,
     url: '#',
     video: 'https://www.youtube.com/watch?v=pv5st7R_jBk',
@@ -42,13 +42,13 @@ const data = [
   },
   {
     id: 4,
-    title: 'Color Palette Generator',
+    title: 'Road Trip Planner',
     description:  
-      'A randomized color-palette generator, built with React and Chakra UI, that allows you to customize your very own color schemes.',
+      'Built with Chakra UI and React, this website communicates with multiple APIs to provide users with everything they need to know about their upcoming road trip. It comes integrated with an interactive map which users can effertlessly navigate, and incorporates persistent client-side data storage for convenient access.',
     image: Project4,
-    url: 'https://palettegen.netlify.app/',
+    url: 'https://road-trip-planner.netlify.app/',
     video: '#',
-    code: 'https://github.com/attimoovy/palette_generator',
+    code: 'https://github.com/attimoovy/road-trip-planner',
   },
   
 ];
