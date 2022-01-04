@@ -8,47 +8,58 @@ import Project1 from '../assets/projects/bannerImg.png';
 import Project2 from '../assets/projects/covidImg.png';
 import Project3 from '../assets/projects/workoutImg.png';
 import Project4 from '../assets/projects/tripImg.png';
+import Project5 from '../assets/projects/sleepImg.png';
 
 const data = [
   {
     id: 1,
+    title: 'Road Trip Planner',
+    description:  
+      'Built with Chakra UI and React, this website communicates with multiple APIs to provide users with everything they need to know about their upcoming road trip. It comes with an interactive map and incorporates persistent client-side data storage.',
+    image: Project4,
+    url: 'https://road-trip-planner.netlify.app/',
+    video: '',
+    code: 'https://github.com/attimoovy/road-trip-planner',
+  },
+  {
+    id: 2,
+    title: 'Sleep.io',
+    description:  
+      'A fully responsive web app which aims to help users track their sleep and improve their lives. Users can view various statistics about their sleep patterns and visualize it all with the help of tables and graphs. Comes with Google User Authentication and persistent database storage with Firebase.',
+    image: Project5,
+    url: 'https://sleepio.netlify.app/',
+    video: '',
+    code: 'https://github.com/attimoovy/sleep_tracker',
+  },
+  {
+    id: 3,
     title: 'Edushare.com',
     description:  
       'A platform, mainly targeted towards college and university level students, where users can gain help and knowledge as well as provide other students with the same through asking questions, sharing content, or simply expressing their opinions',
     image: Project1,
-    url: '#',
+    url: '',
     video: 'https://www.youtube.com/watch?v=_V2gIL7cn20',
     code: 'https://github.com/attimoovy/edushare',
   },
   {
-    id: 2,
+    id: 4,
     title: 'Covid-19 Awareness Site',
     description:  
     'An informative site tailored to providing complete information about COVID-19. Utilizes a JSON API to fetch global data about the pandemic in real-time. Designed the frontend and enhanced its user experience with JavaScript and Bootstrap.',
     image: Project2,
-    url: '#',
+    url: '',
     video: 'https://www.youtube.com/watch?v=D6Azj88995s',
     code: 'https://github.com/attimoovy/covid',
   },
   {
-    id: 3,
+    id: 5,
     title: 'Workout Tracker',
     description:  
       'A web application that can easily help you track all your workouts in an organized manner, and stores it by date and workout type for future reference, all while being presented with a user friendly interface and a dynamic homepage.',
     image: Project3,
-    url: '#',
+    url: '',
     video: 'https://www.youtube.com/watch?v=pv5st7R_jBk',
     code: 'https://github.com/attimoovy/workout_tracker',
-  },
-  {
-    id: 4,
-    title: 'Road Trip Planner',
-    description:  
-      'Built with Chakra UI and React, this website communicates with multiple APIs to provide users with everything they need to know about their upcoming road trip. It comes integrated with an interactive map which users can effertlessly navigate, and incorporates persistent client-side data storage for convenient access.',
-    image: Project4,
-    url: 'https://road-trip-planner.netlify.app/',
-    video: '#',
-    code: 'https://github.com/attimoovy/road-trip-planner',
   },
   
 ];
@@ -123,7 +134,8 @@ export default function Projects() {
               <Image src={item.image} alt={item.title} />
             </Box>
             <div className="card-footer"> 
-            <a
+
+            {item.url && <a
               href={item.url}
               target='_blank'
               rel="noreferrer"
@@ -131,9 +143,9 @@ export default function Projects() {
                 <Button sx={{variant: 'buttons.textButton'}}>
                   Live Site
                 </Button>
-            </a>
+            </a>}
 
-            <a
+            {item.video && <a
               href={item.video}
               target='_blank'
               rel="noreferrer"
@@ -141,7 +153,7 @@ export default function Projects() {
                 <Button sx={{variant: 'buttons.textButton'}}>
                   Video Demo
                 </Button>
-            </a>
+            </a>}
 
             <a
               href={item.code}
@@ -244,6 +256,7 @@ const styles = {
     },
     '.card-footer': {
       display: 'flex',
+      justifyContent: 'space-around',
       alignItems: 'center',
       marginTop: [5, null, null, '33px'],
       '.image': {
