@@ -1,7 +1,6 @@
 /** @jsx jsx */
-import { jsx, Container, Box, Flex, Image } from 'theme-ui';
+import { jsx, Box } from 'theme-ui';
 import { keyframes } from '@emotion/core';
-import React, { useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import PriceCard from 'components/price-card';
 import ButtonGroup from 'components/button-group';
@@ -10,11 +9,14 @@ import SectionHeader from 'components/section-header';
 import { 
   IoLogoHtml5, 
   IoLogoCss3, 
-  IoLogoJavascript,
+  IoLogoFirebase
 } from 'react-icons/io';
 
-import  { SiReact, SiDjango, SiFlask, SiFigma, SiStorybook } from "react-icons/si";
+import { SiReact, SiDjango, SiFlask, SiFigma, SiStorybook, SiNextdotjs, SiChakraui, SiGraphql, SiTypescript, SiFirebase } from "react-icons/si";
 
+import {GoDatabase} from 'react-icons/go'
+
+import {IconBrandMantine} from '@tabler/icons'
 
 
 
@@ -25,6 +27,16 @@ const stack = {
       name: 'Frontend',
       points: [
         {
+          id: 4,
+          icon: <SiReact />,
+          text: 'React',
+        },
+        {
+          id: 3,
+          icon: <SiTypescript />,
+          text: 'TypeScipt',
+        },
+        {
           id: 1,
           icon: <IoLogoHtml5 />,
           text: 'HTML',
@@ -34,49 +46,11 @@ const stack = {
           icon: <IoLogoCss3 />,
           text: 'CSS',
         },
-        {
-          id: 3,
-          icon: <IoLogoJavascript />,
-          text: 'JavaScipt',
-        },
-        {
-          id: 4,
-          icon: <SiReact />,
-          text: 'React',
-        },
-        {
-          id: 5,
-          // icon: <SiNextdotjs />,
-          text: 'NextJS',
-        },
       ]
     },
     {
-      id: 2,
-      name: 'Backend',
-      points: [
-        {
-          id: 1,
-          icon: <SiDjango />,
-          text: 'Django',
-        },
-        {
-          id: 2,
-          // icon: <SiSqlite />,
-          text: 'SQL',
-        },
-        {
-          id: 3,
-          icon: <SiFlask />,
-          text: 'Flask',
-        },
-        
-        
-      ]
-    },
-    {
-      id: 3,
-      name: 'UI/UX',
+      id: 4,
+      name: 'UI Tools and Libraries',
       points: [
         {
           id: 1,
@@ -88,6 +62,60 @@ const stack = {
           icon: <SiStorybook />,
           text: 'StoryBook',
         },
+        {
+          id: 2,
+          icon: <SiChakraui />,
+          text: 'Chakra UI',
+        },
+        {
+          id: 2,
+          icon: <IconBrandMantine />,
+          text: 'Mantine UI',
+        },
+      ]
+    },
+    {
+      id: 3,
+      name: 'Full-Stack',
+      points: [
+        {
+          id: 1,
+          icon: <SiNextdotjs />,
+          text: 'NextJS',
+        },
+        {
+          id: 2,
+          icon: <SiGraphql />,
+          text: 'GraphQL',
+        },
+      ]
+    },
+    {
+      id: 2,
+      name: 'Backend',
+      points: [
+        {
+          id: 4,
+          icon: <SiFirebase />,
+          text: 'Firebase',
+        },
+        {
+          id: 1,
+          icon: <SiDjango />,
+          text: 'Django',
+        },
+        {
+          id: 2,
+          icon: <GoDatabase />,
+          text: 'SQL',
+        },
+        {
+          id: 3,
+          icon: <SiFlask />,
+          text: 'Flask',
+        },
+        
+        
       ]
     },
   ],
@@ -129,13 +157,13 @@ export default function Stack() {
     dotListClass: '',
     focusOnSelect: false,
     infinite: false,
-    keyBoardControl: false,
+    keyBoardControl: true,
     itemClass: '',
     minimumTouchDrag: 80,
     renderButtonGroupOutside: true,
     renderDotsOutside: false,
     responsive: responsive,
-    showDots: false,
+    showDots: true,
     sliderClass: '',
   };
 
