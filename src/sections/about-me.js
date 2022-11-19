@@ -19,7 +19,7 @@ const item = [
       {
         id: 1,
         name: 'github',
-        path: 'https://github.com/attimoovy',
+        path: 'https://github.com/attia-mahmoud',
         icon: <FaGithub />,
       },
       {

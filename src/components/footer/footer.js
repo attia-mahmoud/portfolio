@@ -11,7 +11,7 @@ const social = [
     icon: <FaLinkedin />,
   },
   {
-    path: 'https://github.com/attimoovy',
+    path: 'https://github.com/attia-mahmoud',
     icon: <FaGithubAlt />,
   },
   {
