@@ -9,8 +9,18 @@ import Project2 from '../assets/projects/covidImg.png';
 import Project3 from '../assets/projects/workoutImg.png';
 import Project4 from '../assets/projects/tripImg.png';
 import Project5 from '../assets/projects/sleepImg.png';
+import Project6 from '../assets/projects/asmeImg.png';
 
 const data = [
+  {
+    id: 6,
+    title: 'KFUPM ASME',
+    description: 'Built with NextJS, React, Mantine UI, and Firebase. This website is part of the ASME (American Society of Mechanical Engineers) Student Section initiative at KFUPM and is the go-to hub for all members of the club and for those who wish to learn more about and even join the club as a member or take part in the various programs and events.',
+    image: Project6,
+    url: 'https://kfupm-asme.com',
+    video: '',
+    code: '',
+  },
   {
     id: 1,
     title: 'Road Trip Planner',
@@ -140,7 +150,7 @@ export default function Projects() {
               target='_blank'
               rel="noreferrer"
             >   
-                <Button sx={{variant: 'buttons.textButton'}}>
+                <Button sx={{variant: 'buttons.primary'}}>
                   Live Site
                 </Button>
             </a>}
@@ -150,20 +160,20 @@ export default function Projects() {
               target='_blank'
               rel="noreferrer"
             >  
-                <Button sx={{variant: 'buttons.textButton'}}>
+                <Button sx={{variant: 'buttons.secondary'}}>
                   Video Demo
                 </Button>
             </a>}
 
-            <a
+            {item.code && <a
               href={item.code}
               target='_blank'
               rel="noreferrer"
             >  
-                <Button sx={{variant: 'buttons.textButton'}}>
+                <Button sx={{variant: 'buttons.secondary'}}>
                   Source Code
                 </Button>
-            </a>
+            </a>}
             </div>
           </Box>
         ))}
