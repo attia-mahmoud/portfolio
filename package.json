@@ -9,6 +9,7 @@
     "export": "next export"
   },
   "dependencies": {
+    "@tabler/icons": "^1.112.0",
     "animate.css": "^4.1.1",
     "dotenv": "^8.2.0",
     "emailjs-com": "^3.2.0",
@@ -27,7 +28,7 @@
     "react-dom": "^16.13.0",
     "react-ga": "^3.1.2",
     "react-hook-form": "^7.17.5",
-    "react-icons": "^3.11.0",
+    "react-icons": "^4.6.0",
     "react-modal-video": "^1.2.6",
     "react-multi-carousel": "^2.5.5",
     "react-scroll": "^1.8.0",
