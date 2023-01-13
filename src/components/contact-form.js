@@ -1,20 +1,23 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useForm, Controller } from "react-hook-form";
-import { Box, Label, Input, Textarea, Button } from 'theme-ui';
+import { Box, Label, Input, Textarea, Button, Text } from 'theme-ui';
 import emailjs from 'emailjs-com';
 
 // And now we can use these
 const ContactForm = () => {
     const form = useRef();
+    const [isSent, setIsSent] = useState(false)
 
     const { control, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = (form, e) => {
         e.preventDefault();
-        
+        setIsSent(true)
         emailjs.sendForm('service_0727xkb', 'contact_form' , document.querySelector('form'), "user_jxoKeFvVEnrpP9WUuuM3W")
         .then((result) => {
-            alert('Email Sent Successfully!');
+            setTimeout(() => {
+                setIsSent(false)
+            }, 10000)
         }, (error) => {
             console.log('FAILED...', error.text);
         });
@@ -32,7 +35,7 @@ const ContactForm = () => {
                 render={({ field }) => (
                     <>
                     <Label htmlFor="firstName">First Name: </Label>
-                    <Input {...field} />
+                    <Input {...field} mb={3} />
                     {errors.user_name?.type === 'required' && "First name is required"}
                     </>
                 )}
@@ -47,7 +50,7 @@ const ContactForm = () => {
                 render={({ field }) => (
                     <>
                     <Label htmlFor="email">Email: </Label>
-                    <Input {...field} />
+                    <Input {...field} mb={3} />
                     {errors.user_email?.type === 'required' && "Email is required"}
                     {errors.user_email?.type === 'pattern' && "Enter a valid email address"}
                     </>
@@ -68,7 +71,10 @@ const ContactForm = () => {
                     </>
                 )}
             />
-            <Button>Submit</Button>
+            <Button variant={isSent ? 'disabled' : 'primary'}>Submit</Button>
+            {
+                isSent && <Text>Your email has been sent successfully!</Text>
+            }
         </Box>
     )
 };
