@@ -266,6 +266,12 @@ export default {
         boxShadow: 'rgba(233, 76, 84, 0.57) 0px 9px 20px -5px',
       },
     },
+    disabled: {
+      variant: 'buttons.defaultBtn',
+      color: 'white',
+      bg: 'grey',
+      pointerEvents: 'none',
+    },
     whiteButton: {
       variant: 'buttons.defaultBtn',
       color: 'heading_secondary',
@@ -350,7 +356,7 @@ export default {
   badges: {
     primary: {
       color: 'background',
-      bg: '#28A5FF',
+      bg: '#ea3a60',
       borderRadius: 30,
       p: '3px 11px',
       fontSize: 1,
@@ -360,6 +366,10 @@ export default {
       color: 'primary',
       bg: 'transparent',
       boxShadow: 'inset 0 0 0 1px',
+      borderRadius: 30,
+      p: '3px 11px',
+      fontSize: '0.9rem',
+      letterSpacing: '-0.5px',
     },
   },
 
