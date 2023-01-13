@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import { Container, Box, Heading, Text, Image, Button } from 'theme-ui';
+import { Container, Box, Heading, Text, Image, Button, Flex } from 'theme-ui';
 import BannerImg from 'assets/bannerImg.png';
 import ShapeLeft from 'assets/shape-left.png';
 import ShapeRight from 'assets/shape-right.png';
@@ -8,6 +8,7 @@ import { Link } from 'react-scroll';
 import SectionHeader from 'components/section-header';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Typist from 'react-typist';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Banner() {
   return (
@@ -36,6 +37,14 @@ export default function Banner() {
             </Button>
           </ScrollAnimation>
           </Link>
+          {/* <Flex sx={{gap: '1rem', alignItems:"center", justifyContent: 'center'}} >
+            <Link target="_blank" rel="noreferrer" href={'https://github.com/attia-mahmoud'}>
+              <FaGithub size={48} />
+            </Link>
+            <Link target="_blank" rel="noreferrer" href={'https://linkedin.com/in/attiamahmoud'}>
+              <FaLinkedin />
+            </Link>
+          </Flex> */}
         </Box>
       </Container>
     </section>
