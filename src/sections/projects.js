@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { Flex, jsx, Container, Heading, Text, Box, Image, Button } from 'theme-ui';
+import {useState} from 'react'
+import { Flex, jsx, Container, Heading, Text, Box, Image, Button, Badge } from 'theme-ui';
 import SectionHeader from 'components/section-header';
 import ButtonGroup from 'components/button-group';
 import Carousel from 'react-multi-carousel';
@@ -10,8 +11,30 @@ import Project3 from '../assets/projects/workoutImg.png';
 import Project4 from '../assets/projects/tripImg.png';
 import Project5 from '../assets/projects/sleepImg.png';
 import Project6 from '../assets/projects/asmeImg.png';
+import Project7 from '../assets/projects/fevrierImg.png';
+import Project8 from '../assets/projects/mantaImg.png';
 
 const data = [
+  {
+    id: 7,
+    title: 'Fevrier',
+    description: '',
+    image: Project7,
+    url: 'https://fevrier.vercel.app',
+    video: '',
+    code: 'https://github.com/attia-mahmoud/fevrier',
+    tags: ['React', 'NextJS', 'TypeScript', 'Mantine UI']
+  },
+  {
+    id: 8,
+    title: 'Manta',
+    description: '',
+    image: Project8,
+    url: 'https://mantasite.vercel.app',
+    video: '',
+    code: 'https://github.com/attia-mahmoud/manta',
+    tags: ['React', 'NextJS', 'TypeScript', 'Mantine UI']
+  },
   {
     id: 6,
     title: 'KFUPM ASME',
@@ -20,6 +43,7 @@ const data = [
     url: 'https://kfupm-asme.com',
     video: '',
     code: '',
+    tags: ['React', 'NextJS', 'TypeScript', 'Mantine UI', 'Firebase']
   },
   {
     id: 1,
@@ -30,6 +54,7 @@ const data = [
     url: 'https://road-trip-planner.netlify.app/',
     video: '',
     code: 'https://github.com/attimoovy/road-trip-planner',
+    tags: ['React', 'JavaScript', 'Chakra UI', 'React Leaflet']
   },
   {
     id: 2,
@@ -40,16 +65,18 @@ const data = [
     url: 'https://sleepio.netlify.app/',
     video: '',
     code: 'https://github.com/attimoovy/sleep_tracker',
+    tags: ['React', 'JavaScript', 'Chakra UI', 'Firebase', 'React Vis']
   },
   {
     id: 3,
     title: 'Edushare.com',
     description:  
-      'A platform, mainly targeted towards college and university level students, where users can gain help and knowledge as well as provide other students with the same through asking questions, sharing content, or simply expressing their opinions',
+      'A platform, mainly targeted towards college and university level students, where users can gain help and knowledge as well as provide other students with the same through asking questions, sharing content, or simply expressing their opinions.',
     image: Project1,
     url: '',
     video: 'https://www.youtube.com/watch?v=_V2gIL7cn20',
     code: 'https://github.com/attimoovy/edushare',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Python', 'Django', 'Jinja']
   },
   {
     id: 4,
@@ -60,6 +87,7 @@ const data = [
     url: '',
     video: 'https://www.youtube.com/watch?v=D6Azj88995s',
     code: 'https://github.com/attimoovy/covid',
+    tags: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'Python', 'Django', 'Jinja']
   },
   {
     id: 5,
@@ -70,6 +98,7 @@ const data = [
     url: '',
     video: 'https://www.youtube.com/watch?v=pv5st7R_jBk',
     code: 'https://github.com/attimoovy/workout_tracker',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Python', 'Django', 'Jinja']
   },
   
 ];
@@ -120,6 +149,28 @@ const carouselParams = {
   slidesToSlide:1,
 }
 
+const ReadMore = (props) => {
+  const text = props.children;
+  const [isExpanded, setIsExpanded] = useState(false);
+  const toggleReadMore = () => {
+    setIsExpanded(!isExpanded);
+  };
+  return (
+    <Text {...props}>
+    {
+      text.length < 150 ? text : (
+      <>
+        {!isExpanded ? text.slice(0, 150) + '...' : text}
+        <span onClick={toggleReadMore}>
+          {!isExpanded ? " read more" : " show less"}
+        </span>
+      </>
+      )
+    }
+    </Text>
+  );
+};
+
 export default function Projects() {
   return (
    <section id="projects" sx={{variant: 'section.testimonial'}}>
@@ -137,9 +188,16 @@ export default function Projects() {
             <Heading as="h3" sx={styles.title}>
               {item.title}
             </Heading>
-            <Text sx={styles.description}>
+            <ReadMore sx={styles.description}>
               {item.description}
-            </Text>
+            </ReadMore>
+            <Flex mt={2} sx={{ flexWrap: 'wrap', rowGap: '10px' }}>
+            {
+              item.tags?.map(tag => (
+              <Badge variant="outline" ml={1}>{tag}</Badge>
+              ))
+            }
+            </Flex>
             <Box sx={styles.thumbnail}>
               <Image src={item.image} alt={item.title} />
             </Box>
@@ -298,7 +356,7 @@ const styles = {
     },
   },
   title: {
-    fontSize: [3, 4],
+    fontSize: [3, 6],
     fontWeight: 700,
     mb: [3, null, null, '22px'],
     color: 'text',
@@ -309,6 +367,10 @@ const styles = {
     fontWeight: 'normal',
     color: 'text',
     lineHeight: [1.85, null, 2],
+    '> span': {
+      color: 'red',
+      cursor: 'pointer'
+    }
   },
   heading: {
     fontSize: [1, null, null, 2],
