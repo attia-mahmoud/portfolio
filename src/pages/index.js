@@ -15,7 +15,7 @@ export default function IndexPage() {
   return (
     <ThemeProvider theme={theme}>
         <Layout>
-          <SEO title="Mahmoud Attia" />
+          <SEO />
           <Banner />
           <FeaturedProject />
           <Stack />

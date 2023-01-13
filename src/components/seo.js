@@ -2,15 +2,20 @@ import React from 'react';
 import Head from 'next/head';
 
 export default function SEO({
-  description = "mahmoud's portfolio",
-  author = 'MA',
+  description = "Mahmoud Attia's portfolio",
+  author = 'Mahmoud Attia',
   meta,
-  title = 'portfolio title',
+  title = "Mahmoud Attia",
+  image = "https://images.unsplash.com/photo-1520085601670-ee14aa5fa3e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
 }) {
   const metaData = [
     {
       name: `description`,
       content: description,
+    },
+    {
+      property: `og:url`,
+      content: 'https://www.mahmoudattia.com',
     },
     {
       property: `og:title`,
@@ -23,6 +28,22 @@ export default function SEO({
     {
       property: `og:type`,
       content: `website`,
+    },
+    {
+      property: `og:image`,
+      content: image,
+    },
+    {
+      property: `og:image:type`,
+      content: "image/jpeg",
+    },
+    {
+      property: `og:image:width`,
+      content: "640",
+    },
+    {
+      property: `og:image:height`,
+      content: "426",
     },
     {
       name: `twitter:card`,
