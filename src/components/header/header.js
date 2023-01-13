@@ -7,7 +7,7 @@ import LogoDark from 'assets/mylogo.svg';
 import MobileDrawer from './mobile-drawer';
 import menuItems from './header.data';
 
-const resume = 'https://drive.google.com/file/d/1o-qoMNv9MH0D8a7AUYqEoDH_ICcrJs8z/view?usp=sharing';
+const resume = 'https://drive.google.com/file/d/12ywrWKoIKeVNH5idRbLVl6oXQYnEYavE/view?usp=sharing';
 
 export default function Header({ className }) {
   return (
