@@ -22,7 +22,8 @@ export default function Banner() {
         </Typist>
           </Heading>
           <Text as="p" variant="heroSecondary">
-            I'm a front-end developer with a primary interest in React, and a high passion for combining logic with design  
+            I'm a software developer with a high passion for combining logic with design. 
+            My interests lie in web development, cybersecurity and cloud computing.  
           </Text>
           <Link
             to="projects"
@@ -55,13 +56,14 @@ const styles = {
   banner: {
     pt: ['140px', '145px', '155px', '170px', null, null, '180px', '215px'],
     pb: [2, null, 0, null, 2, 0, null, 5],
-    mb: ['140px', '145px', '155px', '170px', null, null, '180px', '215px'],
+    // mb: ['140px', '145px', '155px', '170px', null, null, '180px', '215px'],
     position: 'relative',
     zIndex: 2,
     '&::before': {
+      display: ['none', 'none', 'none', 'none',  'block'],
       position: 'absolute',
       content: '""',
-      bottom: 6,
+      bottom: 0,
       left: 0,
       height: '100%',
       width: '100%',
@@ -72,6 +74,7 @@ const styles = {
       backgroundSize: '36%',
     },
     '&::after': {
+      display: ['none', 'none', 'none', 'none', 'block'],
       position: 'absolute',
       content: '""',
       bottom: '40px',
