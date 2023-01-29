@@ -17,9 +17,9 @@ export default function IndexPage() {
         <Layout>
           <SEO />
           <Banner />
-          <FeaturedProject />
-          <Stack />
+          {/* <FeaturedProject /> */}
           <Projects />
+          <Stack />
           <AboutMe />
           <ContactSection />
         </Layout>
