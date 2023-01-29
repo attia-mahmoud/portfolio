@@ -13,10 +13,28 @@ import Project5 from '../assets/projects/sleepImg.png';
 import Project6 from '../assets/projects/asmeImg.png';
 import Project7 from '../assets/projects/fevrierImg.png';
 import Project8 from '../assets/projects/mantaImg.png';
+import Project9 from '../assets/projects/lamplighterImg.png';
 
 const data = [
   {
-    id: 7,
+    title: 'Lamplighter Puzzle Game',
+    description: "As part of a research project, this web game is designed to assess the player's personality through gameplay by leveraging the popular Five-Factor Model of personality and statistical analysis.",
+    image: Project9,
+    url: 'https://lamplighter-project.vercel.app',
+    video: '',
+    code: '',
+    tags: ['React', 'NextJS', 'TypeScript', 'Mantine UI', 'Firebase']
+  },
+  {
+    title: 'KFUPM ASME',
+    description: 'This website is part of the ASME (American Society of Mechanical Engineers) Student Section initiative at KFUPM and is the go-to hub for all members of the club and for those who wish to learn more about and even join the club as a member or take part in the various programs and events.',
+    image: Project6,
+    url: 'https://kfupm-asme.com',
+    video: '',
+    code: '',
+    tags: ['React', 'NextJS', 'TypeScript', 'Mantine UI', 'Firebase']
+  },
+  {
     title: 'Fevrier',
     description: '',
     image: Project7,
@@ -26,7 +44,6 @@ const data = [
     tags: ['React', 'NextJS', 'TypeScript', 'Mantine UI']
   },
   {
-    id: 8,
     title: 'Manta',
     description: '',
     image: Project8,
@@ -36,20 +53,9 @@ const data = [
     tags: ['React', 'NextJS', 'TypeScript', 'Mantine UI']
   },
   {
-    id: 6,
-    title: 'KFUPM ASME',
-    description: 'Built with NextJS, React, Mantine UI, and Firebase. This website is part of the ASME (American Society of Mechanical Engineers) Student Section initiative at KFUPM and is the go-to hub for all members of the club and for those who wish to learn more about and even join the club as a member or take part in the various programs and events.',
-    image: Project6,
-    url: 'https://kfupm-asme.com',
-    video: '',
-    code: '',
-    tags: ['React', 'NextJS', 'TypeScript', 'Mantine UI', 'Firebase']
-  },
-  {
-    id: 1,
     title: 'Road Trip Planner',
     description:  
-      'Built with Chakra UI and React, this website communicates with multiple APIs to provide users with everything they need to know about their upcoming road trip. It comes with an interactive map and incorporates persistent client-side data storage.',
+      'This website communicates with multiple APIs to provide users with everything they need to know about their upcoming road trip. It comes with an interactive map and incorporates persistent client-side data storage.',
     image: Project4,
     url: 'https://road-trip-planner.netlify.app/',
     video: '',
@@ -57,7 +63,6 @@ const data = [
     tags: ['React', 'JavaScript', 'Chakra UI', 'React Leaflet']
   },
   {
-    id: 2,
     title: 'Sleep.io',
     description:  
       'A fully responsive web app which aims to help users track their sleep and improve their lives. Users can view various statistics about their sleep patterns and visualize it all with the help of tables and graphs. Comes with Google User Authentication and persistent database storage with Firebase.',
@@ -68,7 +73,6 @@ const data = [
     tags: ['React', 'JavaScript', 'Chakra UI', 'Firebase', 'React Vis']
   },
   {
-    id: 3,
     title: 'Edushare.com',
     description:  
       'A platform, mainly targeted towards college and university level students, where users can gain help and knowledge as well as provide other students with the same through asking questions, sharing content, or simply expressing their opinions.',
@@ -79,7 +83,6 @@ const data = [
     tags: ['HTML', 'CSS', 'JavaScript', 'Python', 'Django', 'Jinja']
   },
   {
-    id: 4,
     title: 'Covid-19 Awareness Site',
     description:  
     'An informative site tailored to providing complete information about COVID-19. Utilizes a JSON API to fetch global data about the pandemic in real-time. Designed the frontend and enhanced its user experience with JavaScript and Bootstrap.',
@@ -90,7 +93,6 @@ const data = [
     tags: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'Python', 'Django', 'Jinja']
   },
   {
-    id: 5,
     title: 'Workout Tracker',
     description:  
       'A web application that can easily help you track all your workouts in an organized manner, and stores it by date and workout type for future reference, all while being presented with a user friendly interface and a dynamic homepage.',
@@ -184,7 +186,7 @@ export default function Projects() {
     <Box sx={styles.carouselWrapper}>
       <Carousel {...carouselParams}>
         {data.map((item) => (
-          <Box sx={styles.reviewCard} key={item.id} >
+          <Box sx={styles.reviewCard} key={item.title} >
             <Heading as="h3" sx={styles.title}>
               {item.title}
             </Heading>
