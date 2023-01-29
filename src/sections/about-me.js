@@ -4,7 +4,8 @@ import { Container, Grid, Text, Box } from 'theme-ui';
 import SectionHeader from 'components/section-header';
 import TeamCard from 'components/team-card';
 import { FaGithub, FaDribbble, FaLinkedin } from 'react-icons/fa';
-
+import ShapeLeft from 'assets/shape-left.png';
+import ShapeRight from 'assets/shape-right.png';
 import myPhoto from 'assets/team/photo.jpg';
 
 
@@ -39,11 +40,11 @@ const item = [
   
 ];
 
-const description = "Since beginning my journey as a programmer, I began to dive deeper into frontend development and have fallen in love with it since. I've gained skilled knowledge of HTML, CSS, and JavaScript, with a vast understanding of User Design with accessiblity in mind. I'm always excited to learn, as the world of Front-End Development keeps evolving."
+const description = "Since beginning my journey as a programmer, I began to dive deeper into frontend development and have fallen in love with it since. I've gained professional knowledge of HTML, CSS, and JavaScript, with a vast understanding of User Design with accessiblity in mind. Additionally, my interests lie in AI/ML, cybersecurity, and cloud computing as well. I'm always excited to learn, as the world of technology keeps evolving."
 
 export default function AboutMe() {
   return (
-    <section>
+    <section sx={styles.banner}>
       <Container>
         <SectionHeader
           slogan="Meet the Dev"
@@ -71,12 +72,47 @@ export default function AboutMe() {
 }
 
 const styles = {
+  banner: {
+    position: 'relative',
+    zIndex: 2,
+    overflow: 'hidden',
+    '&::before': {
+      display: ['none', 'none', 'none', 'none', 'none', 'block'],
+      position: 'absolute',
+      content: '""',
+      bottom: 6,
+      left: -8,
+      height: '100%',
+      width: '100%',
+      zIndex: -1,
+      backgroundImage: `url(${ShapeLeft})`,
+      backgroundRepeat: `no-repeat`,
+      backgroundPosition: 'bottom left',
+      backgroundSize: '36%',
+    },
+    '&::after': {
+      display: ['none', 'none', 'none', 'none', 'none', 'block'],
+      position: 'absolute',
+      content: '""',
+      bottom: '40px',
+      right: -6,
+      height: '100%',
+      width: '100%',
+      zIndex: -1,
+      backgroundImage: `url(${ShapeRight})`,
+      backgroundRepeat: `no-repeat`,
+      backgroundPosition: 'bottom right',
+      backgroundSize: '32%',
+    },
+  },
+  
   grid: {
     mt: [0, null, -6, null, -4],
     gridGap: ['35px 0px', null, 0, null, null, '30px 35px'],
     margin: [0, 'auto'],
     width: [null, null, null, '40%'],
   },
+
   wrapper: {
     margin: '0 auto',
     width: ['90%', null, '60%', null, '40%'],
@@ -94,7 +130,7 @@ const styles = {
     },
 
     subTitle: {
-      fontSize: [1, null, null, '14px', 1],
+      fontSize: [2, null, null, '16px', 2],
       fontWeight: 400,
       lineHeight: 1.9,
     },
