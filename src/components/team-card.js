@@ -94,7 +94,7 @@ const styles = {
     opacity: [1, null, 1],
     pt: 2,
     a: {
-      fontSize: [0, 1, null, 7],
+      fontSize: [5, null, 7],
       color: ['text', null, 'primary'],
       lineHeight: '1em',
       my: [0, null, 0],

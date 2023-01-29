@@ -118,7 +118,7 @@ const styles = {
     width: ['90%', null, '60%', null, '40%'],
     display: 'flex',
     flexDirection: 'column',
-    textAlign: ['left', null, 'center'],
+    textAlign: ['justify', null, 'center'],
     mt: '-35px',
     mb: '50px',
     title: {
