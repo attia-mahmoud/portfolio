@@ -48,7 +48,7 @@ export default function Footer() {
             </nav>
           </Box>
           <Text sx={styles.footer.copyright}>
-            Copyright by {new Date().getFullYear()} Mahmoud Attia
+            &#169; {new Date().getFullYear()} Mahmoud Attia
           </Text>
         </Box>
       </Container>
@@ -89,7 +89,7 @@ const styles = {
         alignItems: 'center',
         justifyContent: 'center',
         color: 'text',
-        fontSize: 17,
+        fontSize: 25,
         mr: '40px',
         transition: 'all 0.25s',
         cursor: 'pointer',
