@@ -7,14 +7,17 @@ import { FaGithubAlt, FaDribbble, FaLinkedin } from 'react-icons/fa';
 
 const social = [
   {
+    name: 'LinkedIn',
     path: 'https://linkedin.com/in/attiamahmoud',
     icon: <FaLinkedin />,
   },
   {
+    name: 'GitHub',
     path: 'https://github.com/attia-mahmoud',
     icon: <FaGithubAlt />,
   },
   {
+    name: 'Dribble',
     path: 'https://dribbble.com/attimoovy',
     icon: <FaDribbble />,
   },
@@ -41,7 +44,7 @@ export default function Footer() {
               <Box sx={styles.footer.social}>
                 {social.map((socialItem, i) => (
                   <Box as="span" key={i} sx={styles.footer.social.icon}>
-                    <a href={socialItem.path} target="_blank" rel="noreferrer">{socialItem.icon}</a>
+                    <a href={socialItem.path} target="_blank" rel="noreferrer" ariaLabel={socialItem.name}>{socialItem.icon}</a>
                   </Box>
                 ))}
               </Box>

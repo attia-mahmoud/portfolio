@@ -32,6 +32,7 @@ const ContactForm = () => {
                 control={control}
                 rules={{ required: true }}
                 defaultValue="John"
+                ariaLabel="First Name"
                 render={({ field }) => (
                     <>
                     <Label htmlFor="firstName">First Name: </Label>
@@ -47,6 +48,7 @@ const ContactForm = () => {
                 rules={{ required: true, pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ }}
                 control={control}
                 defaultValue="John@example.com"
+                ariaLabel="Email"
                 render={({ field }) => (
                     <>
                     <Label htmlFor="email">Email: </Label>
@@ -63,6 +65,7 @@ const ContactForm = () => {
                 rules={{ required: true }}
                 control={control}
                 defaultValue=""
+                ariaLabel="Message"
                 render={({ field }) => (
                     <>
                     <Label htmlFor="message">Message: </Label>
